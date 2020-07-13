@@ -49,6 +49,9 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: TraveLocker_production
   username: TraveLocker
   password: <%= ENV['TRAVELOCKER_DATABASE_PASSWORD'] %>
